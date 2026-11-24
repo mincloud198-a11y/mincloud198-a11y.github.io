@@ -25,38 +25,55 @@ body.is-locked { overflow: hidden; }
   position: fixed;
   z-index: 200;
   inset: 0;
-  display: grid;
-  place-items: center;
-  padding: 1.25rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding: clamp(2rem, 6vw, 6rem);
   color: var(--cream);
+  background: #150e0d;
+}
+.access-gate::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: url("assets/photos/photo-33.jpg") center 42% / cover no-repeat;
+  transform: scale(1.01);
+}
+.access-gate::after {
+  position: absolute;
+  inset: 0;
+  content: "";
   background:
-    radial-gradient(circle at 80% 10%, rgba(198,155,88,.2), transparent 34%),
-    linear-gradient(145deg, #2b1917, #150e0d 72%);
+    linear-gradient(90deg, rgba(18,10,9,.9) 0%, rgba(18,10,9,.65) 42%, rgba(18,10,9,.18) 100%),
+    linear-gradient(0deg, rgba(18,10,9,.78) 0%, transparent 58%);
 }
 .access-gate[hidden] { display: none; }
-.access-card { width: min(44rem, 100%); text-align: center; }
+.access-card { position: relative; z-index: 1; width: min(44rem, 100%); text-align: left; }
 .access-mark {
   display: grid;
   width: 4.4rem;
   height: 4.4rem;
   place-items: center;
-  margin: 0 auto 2rem;
+  margin: 0 0 1.6rem;
   border: 1px solid rgba(255,255,255,.42);
   border-radius: 50%;
-  font-family: var(--serif);
-  font-size: 1.1rem;
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .04em;
 }
 .access-kicker { margin: 0 0 1rem; color: #e1bd82; font-size: .75rem; font-weight: 700; letter-spacing: .14em; }
 .access-card h1 {
   margin: 0;
   font-family: var(--sans);
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: clamp(1.35rem, 6.2vw, 3.1rem);
   font-weight: 700;
   letter-spacing: -.055em;
   white-space: nowrap;
 }
 .access-card > p:not(.access-kicker) { margin: 1.2rem 0 2.2rem; color: rgba(255,255,255,.7); font-size: 1rem; }
-.access-card form { width: min(24rem, 100%); margin: 0 auto; text-align: left; }
+.access-card form { width: min(24rem, 100%); margin: 0; text-align: left; }
 .access-card label { display: block; margin-bottom: .55rem; font-size: .86rem; font-weight: 650; }
 .access-input-row { display: grid; grid-template-columns: 1fr auto; gap: .55rem; }
 .access-input-row input {
