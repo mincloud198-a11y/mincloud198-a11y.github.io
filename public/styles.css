@@ -37,7 +37,7 @@ body.is-locked { overflow: hidden; }
   position: absolute;
   inset: 0;
   content: "";
-  background: url("assets/photos/photo-41.jpg") center 42% / cover no-repeat;
+  background: url("assets/photos/photo-36.jpg") center 42% / cover no-repeat;
   transform: scale(1.01);
 }
 .access-gate::after {
