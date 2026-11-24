@@ -34,7 +34,7 @@ body.is-locked { overflow: hidden; }
     linear-gradient(145deg, #2b1917, #150e0d 72%);
 }
 .access-gate[hidden] { display: none; }
-.access-card { width: min(30rem, 100%); text-align: center; }
+.access-card { width: min(44rem, 100%); text-align: center; }
 .access-mark {
   display: grid;
   width: 4.4rem;
@@ -47,7 +47,14 @@ body.is-locked { overflow: hidden; }
   font-size: 1.1rem;
 }
 .access-kicker { margin: 0 0 1rem; color: #e1bd82; font-size: .75rem; font-weight: 700; letter-spacing: .14em; }
-.access-card h1 { margin: 0; font-family: var(--serif); font-size: clamp(2.3rem, 6vw, 4.2rem); font-weight: 500; letter-spacing: -.06em; }
+.access-card h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5.2vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -.06em;
+  white-space: nowrap;
+}
 .access-card > p:not(.access-kicker) { margin: 1.2rem 0 2.2rem; color: rgba(255,255,255,.7); font-size: 1rem; }
 .access-card form { text-align: left; }
 .access-card label { display: block; margin-bottom: .55rem; font-size: .86rem; font-weight: 650; }
